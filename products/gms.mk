@@ -21,13 +21,13 @@ PRODUCT_PACKAGE_OVERLAYS += \
 
 # Audio (Notifications/Alarms)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.notification_sound=Argon.ogg \
-    ro.config.alarm_alert=Helium.ogg
+    ro.config.notification_sound=Tethys.ogg \
+    ro.config.alarm_alert=Oxygen.ogg
 
 # Audio (Ringtones - Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.config.ringtone=Orion.ogg
+    ro.config.ringtone=Titania.ogg
 endif
 
 # bootanimation (240-320 DPI)
