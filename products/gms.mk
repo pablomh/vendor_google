@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# vendor path
+VENDOR_SONYAOSP_PATH := vendor/google
+
 # SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
@@ -44,6 +47,14 @@ endif
 ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e65% aosp_e66% aosp_e68% aosp_f512% aosp_f813% aosp_f833%, $(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/480/bootanimation.zip:system/media/bootanimation.zip
+endif
+
+# RIL
+ifneq ($(filter aosp_c6903 aosp_d5503 aosp_c6833, $(TARGET_PRODUCT)),)
+BOARD_RIL_CLASS := ../../../$(VENDOR_SONYAOSP_PATH)/ril-rhine/
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.telephony.ril_class=SonyRIL
 endif
 
 # OpenGapps
