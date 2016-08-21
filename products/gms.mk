@@ -12,6 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Force use 8994 Display HAL
+ifneq ($(filter aosp_c6833 aosp_d5503 aosp_c6903 aosp_d6503 aosp_sgp511 aosp_sgp521 aosp_d5803 aosp_d6603 aosp_sgp611 aosp_sgp621, $(TARGET_PRODUCT)),)
+SONY_AOSP_HW := true
+endif
+
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/google/overlay/common
