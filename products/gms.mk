@@ -21,8 +21,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Helium.ogg
 
-# Audio (Ringtones)
-ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e6653 aosp_e6853 aosp_sgp521 aosp_sgp621 aosp_d5803 aosp_e2303 aosp_e5823 aosp_d5503 aosp_c6833 aosp_sgp771, $(TARGET_PRODUCT)),)
+# Audio (Ringtones - Not windy devices allowed)
+ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Orion.ogg
 endif
@@ -34,7 +34,7 @@ PRODUCT_COPY_FILES +=  \
 endif
 
 # bootanimation (480 DPI)
-ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e6653 aosp_e6853, $(TARGET_PRODUCT)),)
+ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e6653 aosp_e6853 aosp_f5121, $(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/480/bootanimation.zip:system/media/bootanimation.zip
 endif
