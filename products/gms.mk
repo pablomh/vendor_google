@@ -39,17 +39,6 @@ PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/480/bootanimation.zip:system/media/bootanimation.zip
 endif
 
-# Recovery
-PRODUCT_PACKAGES += \
-    init_sony \
-    toybox_static
-
-# Provisional Keycheck (kitakami - kanuti - loire)
-ifneq ($(filter aosp_e2303 aosp_e6553 aosp_sgp771 aosp_sgp712 aosp_e5823 aosp_e6653 aosp_e6853 aosp_f5121, $(TARGET_PRODUCT)),)
-PRODUCT_PACKAGES += \
-    keycheck
-endif
-
 # OpenGapps
 #GAPPS_VARIANT := micro
 #GAPPS_FORCE_PACKAGE_OVERRIDES := true
