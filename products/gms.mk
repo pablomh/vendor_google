@@ -40,15 +40,16 @@ PRODUCT_COPY_FILES +=  \
 endif
 
 # OpenGapps
-#GAPPS_VARIANT := micro
-#GAPPS_FORCE_PACKAGE_OVERRIDES := true
-#GAPPS_FORCE_WEBVIEW_OVERRIDES := true
-#GAPPS_FORCE_BROWSER_OVERRIDES := true
+GAPPS_VARIANT := micro
+GAPPS_FORCE_PACKAGE_OVERRIDES := true
+# Don't use this for now .... causes FC
+# GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_FORCE_BROWSER_OVERRIDES := true
 
 # Telephony Packages (Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
-#GAPPS_FORCE_DIALER_OVERRIDES := true
-#GAPPS_FORCE_MMS_OVERRIDES := true
+GAPPS_FORCE_DIALER_OVERRIDES := true
+GAPPS_FORCE_MMS_OVERRIDES := true
 
 # Audio (Ringtones)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -57,18 +58,18 @@ endif
 
 # Add some extras not in micro
 # To override stock AOSP apps
-#PRODUCT_PACKAGES += \
-#    CalculatorGoogle \
-#    GoogleCamera \
-#    GoogleContacts \
-#    LatinImeGoogle \
-#    Music2 \
-#    Photos \
-#    PrebuiltDeskClockGoogle
+PRODUCT_PACKAGES += \
+    CalculatorGoogle \
+    GoogleCamera \
+    GoogleContacts \
+    LatinImeGoogle \
+    Music2 \
+    Photos \
+    PrebuiltDeskClockGoogle
 
-#ifneq ($(filter-out aosp_c6903 aosp_c6833 aosp_d5503, $(TARGET_PRODUCT)),)
-#PRODUCT_PACKAGES += \
-#    TagGoogle
-#endif
+ifneq ($(filter-out aosp_c6903 aosp_c6833 aosp_d5503, $(TARGET_PRODUCT)),)
+PRODUCT_PACKAGES += \
+    TagGoogle
+endif
 
-#$(call inherit-product, vendor/google/build/opengapps-packages.mk)
+$(call inherit-product, vendor/google/build/opengapps-packages.mk)
