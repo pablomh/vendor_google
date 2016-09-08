@@ -7,9 +7,9 @@ export KBUILD_BUILD_USER=$USER
 # erikcas: lower cchace
 prebuilts/misc/linux-x86/ccache/ccache -M 32G
 
-# INFO: before start to build change $device-userdebug
-# with your device model.... Ex. c6903-userdebug for
-# build AOSP for Sony Xperia Z1 (honami - c6903)......
+echo "INFO: before start to build change $device-userdebug"
+echo " with your device model.... Ex. c6903-userdebug for "
+echo " build AOSP for Sony Xperia Z1 (honami - c6903).... "
 
 repo sync
 
