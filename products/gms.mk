@@ -40,7 +40,7 @@ PRODUCT_COPY_FILES +=  \
 endif
 
 # OpenGapps
-GAPPS_VARIANT := micro
+GAPPS_VARIANT := mini
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_FORCE_BROWSER_OVERRIDES := true
@@ -58,13 +58,10 @@ endif
 # Add some extras not in micro
 # To override stock AOSP apps
 PRODUCT_PACKAGES += \
-    CalculatorGoogle \
     GoogleCamera \
     GoogleContacts \
     LatinImeGoogle \
-    Music2 \
-    Photos \
-    PrebuiltDeskClockGoogle
+    Music2
 
 ifneq ($(filter-out aosp_c6903 aosp_c6833 aosp_d5503, $(TARGET_PRODUCT)),)
 PRODUCT_PACKAGES += \
