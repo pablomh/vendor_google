@@ -12,6 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Kernel-headers FLAG
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
     vendor/google/overlay/common
