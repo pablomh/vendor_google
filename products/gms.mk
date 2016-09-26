@@ -45,8 +45,7 @@ endif
 # OpenGapps
 GAPPS_VARIANT := mini
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
-# Don't use this for now .... causes FC
-# GAPPS_FORCE_WEBVIEW_OVERRIDES := true
+GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_FORCE_BROWSER_OVERRIDES := true
 
 # Telephony Packages (Not windy devices allowed)
