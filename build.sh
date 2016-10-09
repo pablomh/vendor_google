@@ -4,7 +4,7 @@
 export USE_CCACHE=1
 export KBUILD_BUILD_USER=$USER
 
-# erikcas: lower cchace
+# erikcas: lower ccache
 prebuilts/misc/linux-x86/ccache/ccache -M 32G
 
 echo "INFO: before start to build change $device-userdebug"
