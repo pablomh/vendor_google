@@ -47,6 +47,7 @@ GAPPS_VARIANT := mini
 GAPPS_FORCE_PACKAGE_OVERRIDES := true
 GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_FORCE_BROWSER_OVERRIDES := true
+GAPPS_FORCE_PIXEL_LAUNCHER := true
 
 # Telephony Packages (Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
