@@ -62,7 +62,6 @@ endif
 # Add some extras not in micro
 # To override stock AOSP apps
 PRODUCT_PACKAGES += \
-    GoogleCamera \
     GoogleContacts \
     LatinImeGoogle \
     Music2
