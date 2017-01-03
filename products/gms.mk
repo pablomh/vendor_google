@@ -49,6 +49,10 @@ GAPPS_FORCE_WEBVIEW_OVERRIDES := true
 GAPPS_FORCE_BROWSER_OVERRIDES := true
 GAPPS_FORCE_PIXEL_LAUNCHER := true
 
+# Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+
 # Telephony Packages (Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
 GAPPS_FORCE_DIALER_OVERRIDES := true
