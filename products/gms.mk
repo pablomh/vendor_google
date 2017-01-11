@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES +=  \
 endif
 
 # bootanimation (480 DPI)
-ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e6653 aosp_e6853 aosp_f5121, $(TARGET_PRODUCT)),)
+ifneq ($(filter aosp_c6903 aosp_d6503 aosp_d6603 aosp_e65% aosp_e66% aosp_e68% aosp_f512% aosp_f813% aosp_f833%, $(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/480/bootanimation.zip:system/media/bootanimation.zip
 endif
