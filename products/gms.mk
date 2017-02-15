@@ -35,7 +35,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 # bootanimation (240-320 DPI)
-ifneq ($(filter aosp_sgp521 aosp_sgp511_windy aosp_sgp621 aosp_sgp611_windy aosp_d5803 aosp_e2303 aosp_e5823 aosp_d5503 aosp_c6833 aosp_sgp771 aosp_sgp712_windy aosp_f5321, $(TARGET_PRODUCT)),)
+ifneq ($(filter aosp_sgp521 aosp_sgp511_windy aosp_sgp621 aosp_sgp611_windy aosp_d5803 aosp_e23% aosp_e5823 aosp_d5503 aosp_c6833 aosp_sgp771 aosp_sgp712_windy aosp_f5321, $(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES +=  \
     vendor/google/prebuilt/common/bootanimation/240_320/bootanimation.zip:system/media/bootanimation.zip
 endif
