@@ -16,6 +16,8 @@
 VENDOR_SONYAOSP_PATH := vendor/google
 
 # SELinux
+BOARD_USE_ENFORCING_SELINUX := true
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
