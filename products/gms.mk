@@ -92,4 +92,8 @@ PRODUCT_PACKAGES += \
     TagGoogle
 endif
 
+# libfuse
+PRODUCT_PACKAGES += \
+    libfuse
+
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)
