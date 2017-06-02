@@ -33,6 +33,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=Tethys.ogg \
     ro.config.alarm_alert=Oxygen.ogg
 
+# libfuse
+PRODUCT_PACKAGES += \
+    libfuse
+
 # Audio (Ringtones - Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
