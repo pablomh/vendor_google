@@ -96,4 +96,11 @@ endif
 PRODUCT_PACKAGES += \
     libfuse
 
+# exfat
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    libexfat \
+    mkfs.exfat \
+    mount.exfat
+
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)
