@@ -37,6 +37,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     libfuse
 
+# exfat
+PRODUCT_PACKAGES += \
+    fsck.exfat \
+    libexfat \
+    mkfs.exfat \
+    mount.exfat
+
 # Audio (Ringtones - Not windy devices allowed)
 ifneq ($(filter-out aosp_sgp511 aosp_sgp611 aosp_sgp712, $(TARGET_PRODUCT)),)
 PRODUCT_PROPERTY_OVERRIDES += \
