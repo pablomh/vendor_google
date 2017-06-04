@@ -26,7 +26,13 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 # Include overlays
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/google/overlay/common
+    $(VENDOR_SONYAOSP_PATH)/overlay/common
+
+# Night Mode
+ifneq ($(filter-out aosp_f813% aosp_f833% aosp_g823%, $(TARGET_PRODUCT)),)
+PRODUCT_PACKAGE_OVERLAYS += \
+    $(VENDOR_SONYAOSP_PATH)/overlay-night/common
+endif
 
 # Audio (Notifications/Alarms)
 PRODUCT_PROPERTY_OVERRIDES += \
