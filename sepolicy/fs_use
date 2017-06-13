@@ -1,0 +1,1 @@
+fs_use_xattr fuseblk u:object_r:labeledfs:s0;

@@ -109,4 +109,8 @@ PRODUCT_PACKAGES += \
     TagGoogle
 endif
 
+# SELinux
+BOARD_SEPOLICY_DIRS += \
+    $(VENDOR_SONYAOSP_PATH)/sepolicy
+
 $(call inherit-product, vendor/google/build/opengapps-packages.mk)

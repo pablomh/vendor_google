@@ -1,0 +1,2 @@
+# Allow vold to access fuse for fuse-based fs
+allow vold fuse_device:chr_file rw_file_perms;
